@@ -7,7 +7,7 @@ const body=require("body-parser")
 app.use(body.urlencoded({extended:true}))
 app.use(express.static("public"))
 
-mongoose.connect("mongodb://127.0.0.1:27017/tododb",{useNewUrlParser:true})
+mongoose.connect("mongodb+srv://prajnarao002:<prajnarao03>@cluster.f2lxtll.mongodb.net/tododb",{useNewUrlParser:true})
 // var lists=[]
 
 //schema
@@ -54,6 +54,6 @@ app.post("/delete",function(req,res){
     // console.log(item)
 })
 
-app.listen( process.env.PORT ||3001,function(){
+app.listen(  3001,function(){
     console.log("server is running in 3001")
 })
